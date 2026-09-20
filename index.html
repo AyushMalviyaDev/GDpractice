@@ -92,7 +92,6 @@
 </head>
 <body class="antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
 
-  <!-- Top Navigation Header -->
   <header class="border-b border-gray-800/80 bg-surface-900/80 backdrop-blur-md sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center space-x-3">
@@ -103,15 +102,14 @@
           <h1 class="text-lg sm:text-xl font-extrabold tracking-tight bg-gradient-to-r from-white via-gray-200 to-brand-400 bg-clip-text text-transparent">
             The GD Practice Group
           </h1>
-          <p class="text-xs text-gray-400 font-medium">Independent Thinking &bull; Associate Software Engineer GD Rounds</p>
+          <p class="text-xs text-gray-400 font-medium">Beginner Friendly &bull; Campus Placements & ASE GD Rounds</p>
         </div>
       </div>
 
-      <!-- Header actions & Audio toggle -->
       <div class="flex items-center space-x-2 sm:space-x-3">
         <div class="hidden sm:flex items-center space-x-2 text-xs font-mono bg-surface-800/90 border border-gray-700/60 rounded-xl px-3 py-1.5">
           <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span class="text-gray-300">100 Original IT Topics</span>
+          <span class="text-gray-300">100 Beginner Topics</span>
         </div>
         
         <button id="navBrowseBtn" class="flex items-center gap-1.5 text-xs sm:text-sm font-semibold px-3.5 py-2 rounded-xl bg-surface-700 hover:bg-surface-600 text-gray-200 transition active:scale-95 border border-gray-600/50">
@@ -133,35 +131,34 @@
       <div class="absolute -right-16 -bottom-16 w-64 h-64 bg-brand-600/10 rounded-full blur-3xl pointer-events-none"></div>
       <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div class="max-w-2xl">
-          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-2">
-            <i data-lucide="brain" class="w-3.5 h-3.5"></i> Unassisted Thinking Mode Active
+          <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-2">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Beginner-Friendly Campus Topics
           </div>
           <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
-            Spin the wheel. Brainstorm your own arguments. Win the debate.
+            Spin the wheel. Brainstorm your thoughts. Speak with confidence!
           </h2>
           <p class="text-xs sm:text-sm text-gray-400 mt-1">
-            Zero spoon-fed templates. Test your spontaneous mental agility for top IT campus hiring (TCS Digital, Infosys DSE, Accenture ASE, Wipro Turbo, Cognizant GenC Next, and product startups).
+            Approachable topics with everyday examples. Perfect for building fluency, structuring points on the fly, and acing college campus hiring rounds (TCS, Infosys, Accenture, Cognizant, Wipro, Capgemini).
           </p>
         </div>
         
-        <!-- Track Selector Filter -->
+        <!-- Category Filter -->
         <div class="w-full md:w-auto flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5">
           <label for="categoryFilter" class="text-xs font-semibold text-gray-400 uppercase tracking-wider whitespace-nowrap">
-            Wheel Category:
+            Topic Category:
           </label>
           <select id="categoryFilter" class="bg-surface-800 border border-gray-700 text-gray-200 text-sm rounded-xl focus:ring-2 focus:ring-brand-500 focus:border-brand-500 block w-full sm:w-64 p-2.5 outline-none transition">
-            <option value="ALL">🌟 All Categories (100 Topics)</option>
-            <option value="AI_AUTOMATION">🤖 AI & Automation (20)</option>
-            <option value="SWE_TRENDS">💻 Software Eng & Tech (20)</option>
-            <option value="WORKPLACE_CULTURE">🏢 IT Workplace & Culture (20)</option>
-            <option value="SOCIO_CYBER">🌐 Socio-Tech & Cybersecurity (20)</option>
-            <option value="ABSTRACT_QUICK">💡 Abstract & Quick-fire (20)</option>
+            <option value="ALL">All Categories (100 Topics)</option>
+            <option value="DAILY_TECH">Tech in Daily Life (20)</option>
+            <option value="COLLEGE_CAREER">College & Career (20)</option>
+            <option value="SOCIAL_MEDIA">Social Media & Culture (20)</option>
+            <option value="ETHICS_SOCIETY">Ethics & Environment (20)</option>
+            <option value="ABSTRACT_CREATIVE">Abstract & Extempore (20)</option>
           </select>
         </div>
       </div>
     </div>
 
-    <!-- Main Practice Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       
       <!-- Left Column: The Interactive Spin Wheel -->
@@ -201,37 +198,36 @@
 
           <!-- Live Status Indicator -->
           <div id="wheelStatusText" class="mt-4 text-xs font-mono text-gray-400 text-center">
-            Click SPIN to draw an unassisted extempore or GD topic
+            Click SPIN to pick a beginner topic and test your speaking
           </div>
         </div>
 
-        <!-- Quick Tips Checklist without giving away answers -->
+        <!-- Quick Tips for Beginners -->
         <div class="mt-6 w-full glass-card rounded-2xl p-5 border border-gray-800 text-xs text-gray-400 space-y-2">
           <div class="font-bold text-accent-amber uppercase tracking-wider flex items-center gap-1.5 text-xs">
-            <i data-lucide="shield-alert" class="w-4 h-4"></i> Interviewer Evaluation Pillars
+            <i data-lucide="lightbulb" class="w-4 h-4"></i> Beginner GD Success Formula
           </div>
-          <p class="leading-relaxed"><strong class="text-gray-200">1. Originality:</strong> Assessors look for your independent logic, not memorized generic sentences.</p>
-          <p class="leading-relaxed"><strong class="text-gray-200">2. Synthesis:</strong> In GD rounds, bridge conflicting arguments rather than shouting over others.</p>
-          <p class="leading-relaxed"><strong class="text-gray-200">3. Real-World Tech:</strong> Anchor your thoughts with actual engineering trade-offs (scalability, security, latency, human impact).</p>
+          <p class="leading-relaxed"><strong class="text-gray-200">1. Define the topic:</strong> Start with a simple 1-line definition or an relatable everyday observation.</p>
+          <p class="leading-relaxed"><strong class="text-gray-200">2. Give two perspectives:</strong> Mention both the positive side and the practical challenges.</p>
+          <p class="leading-relaxed"><strong class="text-gray-200">3. End with a constructive solution:</strong> Offer a balanced, positive takeaway instead of taking extreme views.</p>
         </div>
       </div>
 
-      <!-- Right Column: Active Topic, Timer & Thinking Scratchpad -->
       <div class="lg:col-span-6 w-full space-y-6">
         
         <!-- Active Topic Banner -->
         <div id="topicCard" class="glass-card rounded-3xl p-6 sm:p-7 border border-brand-500/30 shadow-2xl relative overflow-hidden transition-all duration-300">
           
           <div class="flex items-center justify-between gap-2 mb-3">
-            <span id="topicTrackBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-300 border border-brand-500/30">
-              <i data-lucide="tag" class="w-3 h-3"></i> <span id="topicTrackName">AI & Automation</span>
+            <span id="topicTrackBadge" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+              <i data-lucide="tag" class="w-3 h-3"></i> <span id="topicTrackName">Tech in Daily Life</span>
             </span>
             <span id="topicIdBadge" class="text-xs font-mono text-gray-400">Topic #01 of 100</span>
           </div>
 
-          <!-- Topic Title (The Prompt) -->
+          <!-- Topic Title -->
           <h3 id="topicDisplayTitle" class="text-xl sm:text-2xl font-extrabold text-white leading-snug tracking-tight mb-5">
-            Will Generative AI and LLMs replace Junior Software Engineers by 2028?
+            Online Classes vs Classroom Learning: Which is truly better for students?
           </h3>
 
           <!-- Timer Studio -->
@@ -267,7 +263,7 @@
             </div>
           </div>
 
-          <!-- REPLACED AREA: Interactive Thought Scratchpad -->
+          <!-- Thought Scratchpad -->
           <div class="bg-surface-800/80 rounded-2xl p-4 sm:p-5 border border-gray-700/60">
             <div class="flex items-center justify-between gap-2 mb-2">
               <div class="flex items-center gap-2 font-bold text-sm text-accent-cyan">
@@ -281,20 +277,20 @@
             </div>
 
             <p class="text-xs text-gray-400 mb-3 leading-relaxed">
-              Formulate your own opening hook, key engineering arguments, counter-arguments, and synthesis below before the timer runs out.
+              Formulate your own opening hook, key points, counter-arguments, and conclusion below during your prep time.
             </p>
 
             <textarea 
               id="thoughtScratchpad"
               rows="7"
-              placeholder="Jot down your independent thoughts here during the 1-minute prep...&#10;&#10;1. Opening Definition / Context:&#10;2. Key Argument & Technical Precedent:&#10;3. Counter-Argument / Trade-off:&#10;4. Concluding Stance:"
+              placeholder="Structure your thoughts here...&#10;&#10;1. Opening Hook / Definition:&#10;2. Key Argument 1 (Pros / Benefits):&#10;3. Key Argument 2 (Cons / Challenges):&#10;4. Personal Example / Real-life Context:&#10;5. Balanced Conclusion:"
               class="w-full bg-surface-900 border border-gray-700/80 rounded-xl p-3.5 text-xs sm:text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition resize-y font-mono"
             ></textarea>
 
             <!-- Scratchpad Quick Actions -->
             <div class="flex flex-wrap items-center justify-between gap-2 mt-3 pt-2 border-t border-gray-700/50">
               <div class="flex items-center gap-1.5">
-                <button id="insertTemplateBtn" title="Insert PREP Structure skeleton" class="text-[11px] px-2.5 py-1 rounded-lg bg-surface-700 hover:bg-surface-600 text-gray-300 font-medium transition flex items-center gap-1">
+                <button id="insertTemplateBtn" title="Insert speaking structure" class="text-[11px] px-2.5 py-1 rounded-lg bg-surface-700 hover:bg-surface-600 text-gray-300 font-medium transition flex items-center gap-1">
                   <i data-lucide="file-plus-2" class="w-3 h-3 text-brand-400"></i> Insert Skeleton
                 </button>
                 <button id="clearNotesBtn" class="text-[11px] px-2.5 py-1 rounded-lg bg-surface-700 hover:bg-surface-600 text-gray-400 hover:text-rose-400 font-medium transition">
@@ -318,7 +314,6 @@
       </div>
     </div>
 
-    <!-- All 100 Topics Modal Drawer -->
     <div id="topicsModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden items-center justify-center p-4 sm:p-6 transition-opacity">
       <div class="bg-surface-900 border border-gray-700 w-full max-w-4xl max-h-[90vh] rounded-3xl flex flex-col shadow-2xl overflow-hidden">
         
@@ -327,9 +322,9 @@
           <div>
             <h3 class="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
               <i data-lucide="book-open" class="w-5 h-5 text-brand-400"></i>
-              Topic Bank (100 IT Placement Scenarios)
+              Beginner Topic Library (100 Scenarios)
             </h3>
-            <p class="text-xs text-gray-400 mt-0.5">Select any topic to load it directly into your practice session</p>
+            <p class="text-xs text-gray-400 mt-0.5">Click "Practice" on any topic to load it into the studio</p>
           </div>
           <button id="closeModalBtn" class="p-2 rounded-xl bg-surface-800 hover:bg-surface-700 text-gray-400 hover:text-white transition">
             <i data-lucide="x" class="w-5 h-5"></i>
@@ -340,23 +335,23 @@
         <div class="p-4 sm:p-5 border-b border-gray-800 bg-surface-800/40 flex flex-col sm:flex-row gap-3">
           <div class="relative flex-grow">
             <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-3.5 text-gray-400"></i>
-            <input type="text" id="modalSearchInput" placeholder="Search by keyword (e.g., Cloud, AI, Security, Rust, Agile, WFH)..." class="w-full bg-surface-900 border border-gray-700 rounded-xl pl-10 pr-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-brand-500">
+            <input type="text" id="modalSearchInput" placeholder="Search topics (e.g., UPI, Social media, CGPA, AI, WFH)..." class="w-full bg-surface-900 border border-gray-700 rounded-xl pl-10 pr-4 py-2 text-sm text-gray-100 placeholder-gray-500 focus:outline-none focus:border-brand-500">
           </div>
           <div class="flex-shrink-0">
             <select id="modalTrackFilter" class="w-full sm:w-auto bg-surface-900 border border-gray-700 rounded-xl px-3.5 py-2 text-sm text-gray-200 focus:outline-none focus:border-brand-500">
               <option value="ALL">All Categories</option>
-              <option value="AI_AUTOMATION">AI & Automation</option>
-              <option value="SWE_TRENDS">Software Eng & Tech</option>
-              <option value="WORKPLACE_CULTURE">Workplace & Culture</option>
-              <option value="SOCIO_CYBER">Socio-Tech & Cyber</option>
-              <option value="ABSTRACT_QUICK">Abstract & Extempore</option>
+              <option value="DAILY_TECH">Tech in Daily Life</option>
+              <option value="COLLEGE_CAREER">College & Career</option>
+              <option value="SOCIAL_MEDIA">Social Media & Culture</option>
+              <option value="ETHICS_SOCIETY">Ethics & Environment</option>
+              <option value="ABSTRACT_CREATIVE">Abstract & Extempore</option>
             </select>
           </div>
         </div>
 
         <!-- Topics Scrollable List -->
         <div id="topicsListContainer" class="p-4 sm:p-6 overflow-y-auto space-y-3 flex-grow">
-          <!-- Dynamically populated via JS without suggested points -->
+          <!-- Dynamically populated via JS -->
         </div>
 
         <!-- Modal Footer -->
@@ -378,129 +373,124 @@
 
   <footer class="border-t border-gray-800/80 bg-surface-900/60 py-6 text-center text-xs text-gray-500">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-      <div>The GD Practice Group &bull; Built for B.Tech / MCA Campus Placement Aspirants</div>
-      <div class="text-gray-400">Develop independent thinking for ASE, SDE-1, and Graduate Trainee Rounds</div>
+      <div>The GD Practice Group &bull; Built for College Students & ASE Campus Aspirants</div>
+      <div class="text-gray-400">Speak fluently, think independently, succeed in GD & extempore rounds</div>
     </div>
   </footer>
 
-  <!-- JAVASCRIPT LOGIC -->
   <script>
-    // 100 Pure placement topics across 5 crucial tracks - zero pre-cooked strategies
     const GD_TOPICS = [
-      // Track 1: AI & Automation (20)
-      { id: 1, title: "Will Generative AI and LLMs replace Junior Software Engineers by 2028?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 2, title: "AI Hallucinations in Mission-Critical Systems: Who holds ultimate ethical liability?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 3, title: "Is GitHub Copilot making new developers mathematically and algorithmically weaker?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 4, title: "Open Source AI vs Proprietary Closed Models: Which is safer for enterprise technology?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 5, title: "Automated Algorithmic Bias: Can recruitment AI ever be truly neutral?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 6, title: "Deepfakes and Synthetic Media: Is watermarking and cryptographic signing enough?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 7, title: "Should AI scraping of public code repositories be considered fair use or copyright theft?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 8, title: "Autonomous Vehicles in India: Technical readiness vs infrastructure reality", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 9, title: "Is prompt engineering an actual engineering career or a transient skill?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 10, title: "AI in Healthcare: Replacing the doctor or augmenting diagnostics?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 11, title: "AGI (Artificial General Intelligence) Timeline: Hype cycle vs genuine engineering milestone", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 12, title: "AI-Powered Cyber Weapons: Can defensive automation keep pace with polymorphic malware?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 13, title: "Robotic Process Automation (RPA) in Banking: Job killer or efficiency booster?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 14, title: "Can AI exhibit true artistic creativity or is it merely high-dimensional interpolation?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 15, title: "The Environmental Cost of AI: High GPU power consumption vs societal utility", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 16, title: "AI in Customer Service: Does automated chat enhance or ruin customer satisfaction?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 17, title: "Personalized Recommendation Algorithms: Cognitive bubble vs content discovery", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 18, title: "Autonomous Weapon Systems: Is a global ban on algorithmic warfare feasible?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 19, title: "Synthetic Data in ML Training: Solution to privacy and data scarcity or cause of model collapse?", category: "AI_AUTOMATION", catName: "AI & Automation" },
-      { id: 20, title: "AI in Judicial Systems: Can algorithms predict bail and sentencing fairly?", category: "AI_AUTOMATION", catName: "AI & Automation" },
+      // 1. Tech in Daily Life & Basics (20 Topics)
+      { id: 1, title: "Online Classes vs Classroom Learning: Which is truly better for students?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 2, title: "Cashless Society & Digital Payments (UPI): Convenience vs Security Risks", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 3, title: "Smartphones for Students: Educational Boon or Major Distraction?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 4, title: "OTT Streaming Platforms vs Movie Theatres: Is cinema culture fading away?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 5, title: "Electric Vehicles (EVs): The future of green transport or impractical hype?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 6, title: "Food Delivery Apps (Zomato/Swiggy): Helping busy lifestyles or harming health?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 7, title: "E-Commerce vs Local Retail Shops: Can small shopkeepers survive?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 8, title: "Smart Home Devices (Alexa/Google Home): Real utility or privacy concern?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 9, title: "Digital Reading (Kindle/PDFs) vs Physical Printed Books: What do you prefer?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 10, title: "GPS and Google Maps: Have navigation apps made our sense of direction weaker?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 11, title: "Wearable Smartwatches: Genuine fitness booster or another digital distraction?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 12, title: "Free Wi-Fi in Public Places: A basic citizen right or cybersecurity risk?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 13, title: "Automation in Everyday Life: Are modern gadgets making humans lazy?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 14, title: "5G Technology: Will faster mobile internet meaningfully change student life?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 15, title: "Is Technology connecting people together or creating emotional isolation?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 16, title: "Paperless Offices and Digital Documents: How close are we to 100% paperless?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 17, title: "Online Banking vs Visiting Bank Branches: Is traditional banking still necessary?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 18, title: "Virtual Reality (VR) in Education: Gimmick or the next classroom revolution?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 19, title: "Online Doctor Consultations vs Hospital Visits: Pros, cons, and limitations", category: "DAILY_TECH", catName: "Tech in Daily Life" },
+      { id: 20, title: "Can Digital Gadgets ever completely replace traditional teachers and mentors?", category: "DAILY_TECH", catName: "Tech in Daily Life" },
 
-      // Track 2: Software Engineering & Tech Trends (20)
-      { id: 21, title: "DSA vs Real-World Project Building: What should carry more weight in fresher hiring?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 22, title: "Microservices Architecture vs Modular Monolith: Is premature scaling killing startups?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 23, title: "Open Source Contributions vs High University GPA: The better hiring signal for ASEs?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 24, title: "Cloud Computing vs On-Premises Repatriation: Has cloud become too costly for predictable workloads?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 25, title: "TypeScript vs JavaScript: Is compile-time type safety worth the added developer ceremony?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 26, title: "Low-Code / No-Code Platforms vs Traditional Handcrafted Software Development", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 27, title: "DevOps and SRE Culture: Is the boundary between Developer and Operations fully dead?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 28, title: "Serverless Architecture (FaaS): The ultimate paradigm or cold-start nightmare?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 29, title: "Agile vs Waterfall: Has modern Agile devolved into micromanagement theater?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 30, title: "Rust vs C++: Will memory safety mandates cause C++ to fade away in systems programming?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 31, title: "Quantum Computing: Imminent revolution or decades away from practical application?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 32, title: "Technical Debt vs Feature Velocity: When is it justified to ship quick-and-dirty code?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 33, title: "Progressive Web Apps (PWAs) vs Native Mobile Apps: Why haven't PWAs won?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 34, title: "WebAssembly (WASM): The future of browser computing and server micro-sandboxes?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 35, title: "Test-Driven Development (TDD): Engineering discipline or unnecessary developer friction?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 36, title: "GraphQL vs REST vs gRPC: Is REST still the undisputed king of web APIs?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 37, title: "Edge Computing vs Centralized Hyperscale Cloud: Where will data live in 2030?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 38, title: "Database Selection: SQL Relational vs NoSQL vs Vector Databases for modern apps", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 39, title: "Code Review Culture: Quality guardian or bureaucratic bottleneck in tech teams?", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
-      { id: 40, title: "The Death of Software Ownership: Everything as a Subscription (SaaS vs Perpetual Licenses)", category: "SWE_TRENDS", catName: "Software Eng & Tech" },
+      // 2. College & Career Foundations (20 Topics)
+      { id: 21, title: "College CGPA vs Hands-On Practical Skills: What matters more for IT freshers?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 22, title: "Internships vs Online Certifications: Which adds more real value to your resume?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 23, title: "Starting Career at a Startup vs Joining a Big IT MNC: Pros and Cons for freshers", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 24, title: "Work From Home (WFH) vs Office Culture: What is better for junior engineers?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 25, title: "Technical Coding Skills vs Soft Skills & Communication: What decides promotion?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 26, title: "Higher Studies (M.Tech/MS/MBA) vs Taking up a Job immediately after B.Tech", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 27, title: "Campus Placements vs Off-Campus Job Hunting: Which tests true ability?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 28, title: "Specialist vs Generalist: Should engineering students master one skill or many?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 29, title: "Peer Pressure in College: Does it drive healthy competition or anxiety and burnout?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 30, title: "Is a 4-Day Work Week practical for the modern software industry?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 31, title: "College Attendance Criteria (75% Rule): Disciplined learning or outdated rule?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 32, title: "English Language Proficiency: A necessary professional skill or an unfair barrier?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 33, title: "Job Hopping every 1-2 years vs Long-term Company Loyalty for fresh graduates", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 34, title: "College Extracurriculars and Clubs: Waste of study time or leadership nursery?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 35, title: "Should Entrepreneurship be taught as a mandatory subject in engineering colleges?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 36, title: "Work-Life Balance vs Hustle Culture: How should early-career engineers plan?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 37, title: "College Degrees vs Self-Taught Programmers: Is a degree losing its importance?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 38, title: "How should students deal with Interview Rejection and Placement Anxiety?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 39, title: "Group Projects in College: Do they teach real teamwork or does one person do all work?", category: "COLLEGE_CAREER", catName: "College & Career" },
+      { id: 40, title: "Freelancing and Side Gigs during College: Good financial headstart or major distraction?", category: "COLLEGE_CAREER", catName: "College & Career" },
 
-      // Track 3: Workplace & Industry Culture (20)
-      { id: 41, title: "Permanent Work from Home vs Return to Office: What serves engineering teams best?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 42, title: "Moonlighting in IT: Is taking second gigs an ethical breach or personal freedom?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 43, title: "Mass Tech Layoffs followed by Record AI Spending: Is loyalty dead in the IT industry?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 44, title: "The 4-Day Work Week: Feasible for 24/7 mission-critical IT services or a pipe dream?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 45, title: "Is the 70-Hour Work Week recommendation sustainable or toxic for junior software engineers?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 46, title: "Campus to Corporate Transition: Why do fresh engineering hires struggle in their first year?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 47, title: "Bell Curve Appraisals and Forced Ranking: Driving excellence or fostering toxic politics?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 48, title: "Hustle Culture and 'Crunch Time' in Tech Startups vs Work-Life Balance", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 49, title: "Imposter Syndrome among Junior Developers: How can engineering cultures fix it?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 50, title: "Non-Disclosure Agreements (NDAs) and Non-Compete Clauses: Protecting IP or choking talent?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 51, title: "Salary Transparency in Tech Job Postings: Good for equity or harmful to negotiation?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 52, title: "Diversity, Equity, and Inclusion (DEI) in Tech Hiring: Meritocracy vs Representation", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 53, title: "Product Companies vs IT Service Giants: Where should a fresher start their software career?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 54, title: "The Rise of Ghosting in Tech Recruitment: Candidate vs Employer Accountability", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 55, title: "Should Software Engineering have formal Professional Licensing like Civil and Medical careers?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 56, title: "Individual Contributor (IC) Track vs Engineering Management: The career crossroads", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 57, title: "On-Call Rotations and Incident Management: Fair expectation or source of silent burnout?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 58, title: "Quiet Quitting vs Going Above and Beyond: How should managers handle boundary setting?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 59, title: "Cross-Cultural Communication in Global Delivery Teams: The hidden IT challenge", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
-      { id: 60, title: "Employee Monitoring Software (Spyware): Legitimate productivity oversight or breach of trust?", category: "WORKPLACE_CULTURE", catName: "IT Workplace & Culture" },
+      // 3. Social Media & Modern Culture (20 Topics)
+      { id: 41, title: "Social Media: Building creative connectivity or destroying youth mental health?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 42, title: "Online Gaming and Esports: Legitimate career and sport, or dangerous addiction?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 43, title: "Short-form Content (Instagram Reels, YouTube Shorts): Ruining attention spans?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 44, title: "Social Media Influencer Culture: Inspiring entrepreneurship or promoting fake lifestyles?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 45, title: "Cyberbullying and Online Trolling: How can internet platforms protect young users?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 46, title: "FOMO (Fear Of Missing Out): How social media shapes college lifestyle choices", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 47, title: "Cancel Culture on the Internet: Necessary public accountability or digital mob justice?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 48, title: "Online Privacy: Do internet users really care about their personal data?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 49, title: "Fake News and Misinformation on WhatsApp: Whose duty is it to verify facts?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 50, title: "Should There Be an Age Limit for Children to create Social Media Accounts?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 51, title: "Online Dating Apps: Finding genuine connections or superficial swipe culture?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 52, title: "Meme Culture: Innocent humor and stress relief, or spreading subtle negativity?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 53, title: "Digital Detox: Is it realistic to disconnect completely in a connected world?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 54, title: "Online Shopping Addiction: Has 1-click buying destroyed youth saving habits?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 55, title: "Crowdfunding and Online Donations: True kindness or vulnerable to scams?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 56, title: "Online Reviews and Ratings: Can we trust Amazon and Google reviews anymore?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 57, title: "Virtual Friendships vs In-Person Friends: Can an online bond equal real friendship?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 58, title: "Celebrity Endorsements on Social Media: Should creators be held accountable for products?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 59, title: "Has Mobile Photography made us enjoy the moment less and photograph it more?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
+      { id: 60, title: "Excessive Screen Time: Are blue screens stealing sleep and focus from youth?", category: "SOCIAL_MEDIA", catName: "Social Media & Culture" },
 
-      // Track 4: Socio-Tech & Cybersecurity (20)
-      { id: 61, title: "Data Privacy vs Technological Innovation: Can strict GDPR laws coexist with rapid AI progress?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 62, title: "Digital Public Infrastructure (DPI): The global impact of India's UPI, Aadhaar, and ONDC", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 63, title: "Cyber Warfare: Are national critical infrastructures (power grids, water, banking) defensible?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 64, title: "End-to-End Encryption (E2EE) vs Law Enforcement Access: The Backdoor Debate", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 65, title: "Social Media Algorithms and Teen Mental Health: Should tech executives face legal accountability?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 66, title: "Ransomware-as-a-Service (RaaS): Should paying cyber ransoms be made illegal?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 67, title: "The Digital Divide in Education: Has tech bridged or widened the socioeconomic gap?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 68, title: "Central Bank Digital Currencies (CBDC) vs Cryptocurrencies: Financial freedom vs state surveillance", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 69, title: "Internet Shutdowns during Civil Unrest: Legitimate public safety tool or violation of rights?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 70, title: "Right to Repair Electronics: Fighting planned obsolescence in consumer hardware", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 71, title: "Zero-Day Vulnerability Markets: Should security researchers sell to brokers or disclose responsibly?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 72, title: "Smart Cities and Mass IoT Surveillance: Safe paradise or Orwellian dystopia?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 73, title: "Space Tech & Satellite Internet (Starlink): Bridging rural darkness vs low-earth orbit clutter", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 74, title: "E-Waste Crisis: Who should pay for recycling millions of discarded smartphones and servers?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 75, title: "Biometric Authentication (Fingerprints & FaceID): Superior security or irrecoverable identity theft?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 76, title: "Fintech Micro-Lending Apps: Financial empowerment or digital loan-shark harassment?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 77, title: "Open Source Software Supply Chain Vulnerabilities: Who maintains the internet's foundation?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 78, title: "Dark Patterns in UX Design: Free market marketing or deceptive consumer manipulation?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 79, title: "5G & 6G Rollouts: Geopolitical weapon of telecommunications dominance", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
-      { id: 80, title: "Gig Economy Platforms: Flexible micro-entrepreneurship or algorithmic exploitation?", category: "SOCIO_CYBER", catName: "Socio-Tech & Cyber" },
+      // 4. Ethics, Society & Environment (20 Topics)
+      { id: 61, title: "Artificial Intelligence (AI): Friend or Foe to future human employment?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 62, title: "Single-Use Plastic Ban: Are consumers and companies ready for sustainable alternatives?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 63, title: "E-Waste Disposal: Who should take responsibility for discarded phones and laptops?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 64, title: "Smart Cities: Modern infrastructure development vs Environmental sustainability", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 65, title: "Fast Fashion and Cheap Clothing: Great affordability or ecological disaster?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 66, title: "Renewable Energy (Solar & Wind): Can it replace coal and fossil fuels completely?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 67, title: "Using AI Tools (ChatGPT) for College Assignments: Smart productivity or cheating?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 68, title: "Public CCTV Surveillance: Improving women's safety or invading personal privacy?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 69, title: "Food Wastage at Events and Hostels: How can technology and youth solve it?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 70, title: "Public Transport vs Private Vehicles: How to fix urban traffic congestion?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 71, title: "Animal Welfare vs Industrial Farming and Testing: Where is the ethical line?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 72, title: "Water Crisis in Metro Cities: Can individual conservation prevent Day Zero?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 73, title: "Should Free Higher Education be guaranteed for all deserving college students?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 74, title: "Brain Drain: Why are Indian engineers moving abroad, and how can we retain talent?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 75, title: "Online Privacy vs National Security: Should government monitor private chats?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 76, title: "Can Individual Habits truly combat Global Warming, or do big industries have to change?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 77, title: "Digital Literacy for Senior Citizens: How can the younger generation bridge the gap?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 78, title: "Is Moral and Value Education needed in modern engineering colleges?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 79, title: "Package Delivery Pollution: The hidden carbon footprint of 10-minute grocery delivery", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
+      { id: 80, title: "Right to Disconnect: Should bosses be banned from calling employees after working hours?", category: "ETHICS_SOCIETY", catName: "Ethics & Environment" },
 
-      // Track 5: Abstract & Extempore Quick-fire (20)
-      { id: 81, title: "Zero: Is it complete emptiness or infinite potential in computer science?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 82, title: "If bugs were considered 'undocumented features', how would software evolve?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 83, title: "Red Tape vs Fast Innovation: Can bureaucracy ever be an engineering asset?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 84, title: "Silence in a Group Discussion: Is listening more powerful than speaking first?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 85, title: "The Butterfly Effect in Distributed Systems: One single byte causing global outages", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 86, title: "Black and White vs Grayscale: The danger of binary thinking in engineering choices", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 87, title: "The Clock is Ticking: Is Speed of Delivery superior to Code Quality?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 88, title: "Shadows in the Digital Age: Do digital footprints ever truly disappear?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 89, title: "The Paradox of Choice: Does having too many tech stacks hurt junior software engineers?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 90, title: "Masks We Wear: Online Avatars and Pseudonymity vs Real Identity Verification", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 91, title: "The Glass Ceiling in Tech: Skill vs Perception in corporate progression", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 92, title: "Rivers vs Canals: Spontaneous Creative Hackathons vs Rigid Enterprise Roadmaps", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 93, title: "Walls vs Bridges: Proprietary Closed Walled Gardens vs Interoperable Open Web", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 94, title: "The Sound of Chaos: Is production firefighting an unavoidable badge of honor for techies?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 95, title: "Mirrors and Algorithms: Do tech platforms reflect society or shape it?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 96, title: "Seeds in Concrete: Can innovative tech startups thrive inside massive legacy conglomerates?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 97, title: "The Anchor and the Sail: Balancing Computer Science Fundamentals with Trendy Frameworks", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 98, title: "Invisible Labor: Why is maintenance and documentation valued less than writing new code?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 99, title: "Is Failure the Best Teacher, or is Failure in Software Engineering simply poor testing?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" },
-      { id: 100, title: "The Final Mile: Why do 90% of software projects spend 90% of their time on the last 10%?", category: "ABSTRACT_QUICK", catName: "Abstract & Extempore" }
+      // 5. Abstract & Creative Extempore (20 Topics)
+      { id: 81, title: "Time is Money: How do you prioritize what matters in your day?", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 82, title: "Failure is not the opposite of Success, it is part of Success", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 83, title: "Red vs Blue: What do colors symbolize in human emotions and technology?", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 84, title: "Silence: Is listening more persuasive than speaking loudly in a group?", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 85, title: "The Power of Small Daily Habits: Atomic steps toward big achievements", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 86, title: "A Pen is mightier than a Sword: Does this still hold true in the digital keyboard era?", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 87, title: "Comfort Zone: A beautiful place, but nothing ever grows there", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 88, title: "Speed vs Direction: Why knowing where you are going matters more than moving fast", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 89, title: "The Glass Half Full vs Half Empty: How optimism shapes problem solving", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 90, title: "Change is the only constant: How should engineers adapt to new technologies?", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 91, title: "Zero: Complete emptiness or the origin of all possibilities?", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 92, title: "Bridges vs Walls: Building teamwork and connection instead of isolation", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 93, title: "Action speaks louder than words: Translating intentions into verifiable results", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 94, title: "Mistakes: Are they proof that you are trying and learning?", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 95, title: "The Road Less Traveled: Choosing unconventional career paths with confidence", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 96, title: "Patience in an Instant Gratification World: Why good things take time to build", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 97, title: "Curiosity: The single most important trait of a lifelong learner", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 98, title: "Every Cloud has a Silver Lining: Finding resilience in tough campus interview seasons", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 99, title: "Simplicity is the Ultimate Sophistication: In coding, speaking, and life", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" },
+      { id: 100, title: "The Journey vs The Destination: Enjoying college and growth along the way", category: "ABSTRACT_CREATIVE", catName: "Abstract & Extempore" }
     ];
 
-    // ==========================================
-    // AUDIO SYNTHESIZER
-    // ==========================================
     let audioCtx = null;
     let isSoundEnabled = true;
 
@@ -569,9 +559,6 @@
       } catch(e) {}
     }
 
-    // ==========================================
-    // WHEEL CANVAS LOGIC & RENDERING
-    // ==========================================
     const canvas = document.getElementById('wheelCanvas');
     const ctx = canvas.getContext('2d');
     const categorySelect = document.getElementById('categoryFilter');
@@ -677,7 +664,7 @@
       initAudio();
 
       isSpinning = true;
-      document.getElementById('wheelStatusText').innerHTML = `<span class="text-brand-400 font-semibold animate-pulse">Spinning for an unassisted challenge...</span>`;
+      document.getElementById('wheelStatusText').innerHTML = `<span class="text-brand-400 font-semibold animate-pulse">Spinning for a beginner topic...</span>`;
 
       spinVelocity = Math.random() * 0.28 + 0.38;
       spinDeceleration = 0.985 + (Math.random() * 0.005);
@@ -752,15 +739,12 @@
       } catch(e) {}
     }
 
-    // ==========================================
-    // SCRATCHPAD & TOPIC STATE
-    // ==========================================
     let currentLoadedTopic = GD_TOPICS[0];
     const scratchpad = document.getElementById('thoughtScratchpad');
     const wordCountEl = document.getElementById('wordCount');
     const charCountEl = document.getElementById('charCount');
 
-    // Key-value store for per-topic notes
+    // Local storage of topic notes
     const topicNotesStore = {};
 
     function updateNoteMetrics() {
@@ -772,12 +756,10 @@
 
     scratchpad.addEventListener('input', () => {
       updateNoteMetrics();
-      // Auto-save per current topic
       topicNotesStore[currentLoadedTopic.id] = scratchpad.value;
     });
 
     function loadTopicIntoStudio(topic) {
-      // Save current note before switching
       if (currentLoadedTopic) {
         topicNotesStore[currentLoadedTopic.id] = scratchpad.value;
       }
@@ -787,19 +769,17 @@
       document.getElementById('topicTrackName').textContent = topic.catName;
       document.getElementById('topicIdBadge').textContent = `Topic #${topic.id} of 100`;
 
-      // Restore saved notes if exists, else clear
       scratchpad.value = topicNotesStore[topic.id] || '';
       updateNoteMetrics();
 
-      // Color category badge depending on track
       const badge = document.getElementById('topicTrackBadge');
-      if (topic.category === 'AI_AUTOMATION') {
+      if (topic.category === 'DAILY_TECH') {
         badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30';
-      } else if (topic.category === 'SWE_TRENDS') {
+      } else if (topic.category === 'COLLEGE_CAREER') {
         badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
-      } else if (topic.category === 'WORKPLACE_CULTURE') {
+      } else if (topic.category === 'SOCIAL_MEDIA') {
         badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-300 border border-brand-500/30';
-      } else if (topic.category === 'SOCIO_CYBER') {
+      } else if (topic.category === 'ETHICS_SOCIETY') {
         badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-rose-500/20 text-rose-300 border border-rose-500/30';
       } else {
         badge.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/20 text-amber-300 border border-amber-500/30';
@@ -813,7 +793,7 @@
     }
 
     document.getElementById('insertTemplateBtn').addEventListener('click', () => {
-      const template = `[1. Opening Hook & Context]:\n- \n\n[2. Core Arguments (Points In Favor/Against)]:\n- \n- \n\n[3. Real-World Tech Example / Precedent]:\n- \n\n[4. Balanced Conclusion / Way Forward]:\n- `;
+      const template = `[1. Opening Hook / Context]:\n- \n\n[2. Positive Aspects / In Favor]:\n- \n- \n\n[3. Challenges / Practical Concerns]:\n- \n\n[4. Personal Observation or Example]:\n- \n\n[5. Balanced Conclusion / Way Forward]:\n- `;
       
       if (scratchpad.value.trim() !== '') {
         scratchpad.value += `\n\n${template}`;
@@ -822,7 +802,7 @@
       }
       topicNotesStore[currentLoadedTopic.id] = scratchpad.value;
       updateNoteMetrics();
-      showToast("Inserted argument skeleton!");
+      showToast("Inserted beginner prep skeleton!");
       scratchpad.focus();
     });
 
@@ -830,7 +810,7 @@
       scratchpad.value = '';
       topicNotesStore[currentLoadedTopic.id] = '';
       updateNoteMetrics();
-      showToast("Notes cleared.");
+      showToast("Scratchpad cleared.");
     });
 
     document.getElementById('copyNotesBtn').addEventListener('click', () => {
@@ -841,9 +821,6 @@
       copyToClipboard(`Topic #${currentLoadedTopic.id}: ${currentLoadedTopic.title}\n\nMy Prep Notes:\n${scratchpad.value}`, "Your prep notes copied to clipboard!");
     });
 
-    // ==========================================
-    // TIMER CONTROLS
-    // ==========================================
     let timerTotalSeconds = 60;
     let timerRemainingSeconds = 60;
     let timerInterval = null;
@@ -945,9 +922,6 @@
       updateTimerUI();
     }
 
-    // ==========================================
-    // TOPIC LIBRARY MODAL
-    // ==========================================
     const topicsModal = document.getElementById('topicsModal');
     const navBrowseBtn = document.getElementById('navBrowseBtn');
     const closeModalBtn = document.getElementById('closeModalBtn');
@@ -1029,9 +1003,6 @@
       lucide.createIcons();
     }
 
-    // ==========================================
-    // CLIPBOARD & UTILITIES
-    // ==========================================
     let toastTimeout;
     function showToast(msg) {
       const toast = document.getElementById('toastNotification');
@@ -1069,9 +1040,6 @@
       copyToClipboard(`GD/Extempore Topic: "${currentLoadedTopic.title}" (The GD Practice Group)`, "Topic title copied to clipboard!");
     });
 
-    // ==========================================
-    // INITIALIZATION
-    // ==========================================
     window.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
       updateWheelData();
